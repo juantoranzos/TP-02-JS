@@ -1,0 +1,53 @@
+<!-- Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de identidad).
+
+El algoritmo para calcular la letra del dni es el siguiente :
+
+El número debe ser entre 0 y 99999999
+Debemos calcular el resto de la división entera entre el número y el número 23.
+Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:  (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E) 
+Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora de letra del DNI</title>
+</head>
+<body>
+	<h1>Calculadora de letra del DNI</h1>
+
+	<p>Introduce tu número de DNI:</p>
+
+	<input type="text" id="dni" placeholder="Introduce tu número de DNI">
+
+	<button onclick="calcularLetraDNI()">Calcular letra del DNI</button>
+
+	<p id="resultado"></p>
+
+	<script>
+		function calcularLetraDNI() {
+			let dni = document.getElementById("dni").value;
+
+			if (dni === "") {
+				alert("Debes introducir un número de DNI.");
+				return;
+			}
+
+			let numero = parseInt(dni);
+
+			if (isNaN(numero) || numero < 0 || numero > 99999999) {
+				alert("El número de DNI introducido no es válido.");
+				return;
+			}
+
+			let letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+			let resto = numero % 23;
+			let letra = letrasDNI.charAt(resto);
+
+			let resultado = "La letra del DNI " + dni + " es: " + letra;
+			document.getElementById("resultado").innerHTML = resultado;
+		}
+	</script>
+</body>
+</html>
