@@ -1,3 +1,21 @@
+
+// Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+
+// 1
+// 2
+// 3
+// 4 (Múltiplo de 4)
+// 5-
+// ————————————————————-
+
+// 6
+// 7
+// 8 (Múltiplo de 4)
+// 9 (Múltiplo de 9)
+// 10
+
+
+
 // Variables para contar el número de múltiplos de 4 y 9 encontrados
 let countMultiples4 = 0;
 let countMultiples9 = 0;
@@ -29,5 +47,5 @@ for (let num = 1; num <= 500; num++) {
 
 
 // Imprimir el recuento de múltiplos de 4 y 9 encontrados
-document.write("Número total de múltiplos de 4 encontrados: " + countMultiples4);
-document.write("Número total de múltiplos de 9 encontrados: " + countMultiples9);
+document.write("Número total de múltiplos de 4 encontrados:" + countMultiples4);
+document.write("Número total de múltiplos de 9 encontrados:" + countMultiples9);
