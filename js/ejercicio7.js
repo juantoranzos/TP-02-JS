@@ -7,10 +7,7 @@
 …..
 333
 22
-1
-
-
- */
+1 */
 let usuarioInput = prompt("ingrese un numero entre 1 y 50:");
 let piramide = "";
 //validar la entrada del usuario
